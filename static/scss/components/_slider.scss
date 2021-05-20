@@ -1,0 +1,21 @@
+.swiper-container{
+  position: absolute;
+  bottom: 210px;
+  right: 0;
+  width: 55%;
+}
+.swiper-slide{
+  height: 334px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/general/video-frame.png") no-repeat  center center;
+}
+.swiper-slide-prev{
+  opacity: 0 !important;
+}
+.swiper-slide-next{
+  transform: scale(.7);
+}
