@@ -684,6 +684,25 @@ body {
     right: 0;
     border-bottom: 1px solid #FF002E;
     border-right: 1px solid #FF002E; }
+  .hero-information .information-yellow {
+    color: #FFE600; }
+  .hero-information .information-red {
+    color: #FB2740; }
+
+.mySwiper {
+  width: auto;
+  max-width: 40%;
+  z-index: 11; }
+  .mySwiper svg {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 61px;
+    z-index: -10;
+    left: 5px;
+    max-width: 376px;
+    max-height: 216px; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: 305px;
@@ -755,13 +774,16 @@ body {
 
 @media screen and (max-width: 1440px) {
   .hero-wrapper .pilot-img {
-    left: 121px;
-    width: 725px;
-    height: 747px; }
+    max-width: 600px;
+    max-height: 600px; }
+  .hero-wrapper .car-img img {
+    max-width: 700px; }
   .hero-wrapper .glitch-img {
-    width: 1110px; }
+    width: 70%;
+    height: 200px;
+    left: 60px; }
   .hero-wrapper .cybr-btn-yellow {
-    top: 35%; }
+    top: 90px; }
   .hero-wrapper .cybr__btn--wrap {
     right: 36px;
     bottom: 52px; }
@@ -788,11 +810,90 @@ body {
     right: 103px;
     top: 260px; } }
 
+@media screen and (max-width: 1350px) {
+  .hero-wrapper .hero-image img:nth-child(1) {
+    max-width: 200px; }
+  .hero-wrapper .hero-image img:nth-child(2) {
+    max-width: 170px; } }
+
+@media screen and (max-width: 1200px) {
+  .hero-wrapper .car-img img {
+    max-width: 600px; }
+  .hero-wrapper .hero-social {
+    z-index: 50; }
+  .hero-information {
+    display: none; } }
+
+@media screen and (max-width: 992px) {
+  .hero-wrapper {
+    min-height: 896px; }
+    .hero-wrapper .cybr-btn-yellow {
+      top: 35%;
+      transform: rotate(270deg);
+      margin-right: -122px;
+      right: 100%; }
+    .hero-wrapper .glitch-img {
+      left: 0;
+      right: 0;
+      height: 140px; }
+      .hero-wrapper .glitch-img:after {
+        position: fixed;
+        content: '';
+        left: 0;
+        top: 100px;
+        width: 100vw;
+        height: 2px;
+        z-index: -2;
+        background: #FFE600; }
+    .hero-wrapper .car-img {
+      bottom: 0;
+      top: 20%;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 auto; }
+      .hero-wrapper .car-img img {
+        max-width: 100%;
+        transform: scale(-1, 1); }
+    .hero-wrapper .pilot-img {
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 auto; }
+      .hero-wrapper .pilot-img img {
+        transform: scale(-1, 1); }
+    .hero-wrapper .swiper-container {
+      z-index: 11;
+      width: 100%;
+      max-width: 100%; }
+    .hero-wrapper .hero-image {
+      bottom: 275px;
+      transform: rotate(-90deg);
+      left: -130px; }
+      .hero-wrapper .hero-image img {
+        margin-right: 20px; }
+        .hero-wrapper .hero-image img:nth-child(1) {
+          max-width: 140px; }
+        .hero-wrapper .hero-image img:nth-child(2) {
+          max-width: 110px; }
+    .hero-wrapper .cybr__btn--wrap {
+      right: 22px;
+      bottom: 36px; }
+    .hero-wrapper .hero-social {
+      bottom: 38px;
+      left: 30px; }
+    .hero-wrapper .hero-subtitle {
+      bottom: 45%;
+      left: auto;
+      right: 20px; }
+  .hero-social:before {
+    width: 121px; } }
+
 .cybr__btn--wrap {
   position: absolute;
   right: 60px;
   bottom: 60px;
-  z-index: 10; }
+  z-index: 12; }
 
 .cybr-btn-shadow {
   filter: drop-shadow(0px 0px 15px rgba(251, 39, 64, 0.5)); }
@@ -841,18 +942,19 @@ body {
 
 .cybr-btn-yellow {
   position: fixed;
-  top: 50%;
-  left: -80px;
-  transform: rotate(-90deg);
+  top: 140px;
+  right: 50px;
   filter: drop-shadow(0px 0px 15px rgba(255, 230, 0, 0.5));
-  --primary: #FFE600;
-  --color: #000; }
+  --primary: transparent;
+  background: url("../images/general/bg-yellow.svg") no-repeat center;
+  --color: #FFE600;
+  background-size: contain; }
 
 .cybr-btn-yellow:hover {
-  --primary: #FFE600; }
+  --primary: transparent; }
 
 .cybr-btn-yellow:active {
-  --primary: #FFE600; }
+  --primary: transparent; }
 
 .cybr-btn:after,
 .cybr-btn:before {
@@ -996,7 +1098,8 @@ body {
   overflow: hidden; }
 
 .glitch__item {
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   top: 0;

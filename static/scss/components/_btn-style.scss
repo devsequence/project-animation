@@ -2,7 +2,7 @@
   position: absolute;
   right: 60px;
   bottom: 60px;
-  z-index: 10;
+  z-index: 12;
 }
 .cybr-btn-shadow {
   filter: drop-shadow(0px 0px 15px rgba(#FB2740, 0.5));
@@ -53,21 +53,20 @@
   --primary: #FF002E;
 }
 .cybr-btn-yellow{
-
   position: fixed;
-  top: 50%;
-  left: -80px;
-  transform: rotate(-90deg);
+  top: 140px;
+  right: 50px;
   filter: drop-shadow(0px 0px 15px rgba(#FFE600, 0.5));
-  --primary: #FFE600;
-  --color: #000;
+  --primary: transparent;
+  background: url("../images/general/bg-yellow.svg") no-repeat center;
+  --color: #FFE600;
+  background-size: contain;
 }
-
 .cybr-btn-yellow:hover {
-  --primary: #FFE600;
+  --primary: transparent;
 }
 .cybr-btn-yellow:active {
-  --primary: #FFE600;
+  --primary: transparent;
 }
 .cybr-btn:after,
 .cybr-btn:before {

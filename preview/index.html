@@ -37,10 +37,8 @@
 	<header class="header" id="header"></header>
 	<!--page-content-->
 	<div class="page-content">
-		<div class="hero-wrapper">
-			<div class="glitch">
-				<div class="glitch__item" style="background-image: url('../static/images/general/1.jpg')"></div>
-			</div>
+		<div class="hero-wrapper" style="background-image: url('../static/images/general/1.jpg')">
+
 			<div class="glitch-img">
 				<div class="glitch__item" style="background-image: url('../static/images/general/huragan-logo.svg')"></div>
 				<div class="glitch__item" style="background-image: url('../static/images/general/huragan-logo.svg')"></div>
@@ -55,12 +53,23 @@
 				<img src="../static/images/general/car-img.png" alt="">
 			</div>
 			<div class="hero-information">
-				На этом месте будет информация о презентации машин в Одессе 5-го мая
+				<span class="information-yellow">На этом месте</span>
+				 будет информация о презентации машин в Одессе <span class="information-red">5-го мая</span>
 			</div>
 			<div class="swiper-container mySwiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="../static/images/general/video-image-1.png" alt="">
+						<svg>
+							<defs>
+								<clipPath id="shape">
+									<path d="M284.812 12.011L284.812 12.0111C280.925 15.9097 275.751 18.0594 270.256 18.0594H104.753C99.2583 18.0594 94.0843 15.9097 90.1967 12.0111L80.7524 2.54007C79.4408 1.22486 77.703 0.509039 75.8525 0.509039H0.5V215.5H152.895C154.743 215.5 156.482 214.776 157.795 213.468C157.795 213.468 157.795 213.468 157.796 213.468L192.787 178.377C196.675 174.479 201.849 172.329 207.344 172.329H367.574C371.397 172.329 374.5 169.211 374.5 165.382V0.5H299.156C297.308 0.5 295.57 1.22345 294.257 2.53087L284.812 12.011ZM284.812 12.011L294.256 2.53218L284.812 12.011Z" stroke="black"/>
+								</clipPath>
+
+							</defs>
+							<image style="width: 100%" clip-path="url(#shape)"  xlink:href="../static/images/general/video-image-1.png" >
+							</image>
+						</svg>
+<!--						<img src="../static/images/general/video-image-1.png" alt="">-->
 					</div>
 					<div class="swiper-slide">
 						<img src="../static/images/general/video-image-2.png" alt="">
@@ -93,8 +102,8 @@
 
 				<div class="cybr-shadow ">
 					<button class="cybr-btn cybr-btn-yellow">
-						О<span aria-hidden> НАС</span>
-						<span aria-hidden class="cybr-btn__glitch">О НАС</span>
+						<span aria-hidden> КОМАНДА</span>
+						<span aria-hidden class="cybr-btn__glitch">КОМАНДА</span>
 					</button>
 				</div>
 				<div class="cybr-btn-shadow">
