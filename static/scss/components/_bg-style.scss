@@ -39,7 +39,6 @@ body{
 }
 
   .glitch__item{
-    //background: url('../images/general/1.jpg') no-repeat 50% 50% / cover;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -49,11 +48,10 @@ body{
   }
   .glitch-img{
     width: 1253px;
-    height: 186px;
+    height: 253px;
     top: 21px;
     margin: 0 auto;
     left: 0;
-    right: 0;
     position: absolute;
     z-index: 3;
   }

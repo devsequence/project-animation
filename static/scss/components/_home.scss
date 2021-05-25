@@ -1,24 +1,12 @@
+body{
+  overflow: hidden;
+}
 .hero{
   &-wrapper{
     background-size: cover !important;
     height: 100vh;
+    overflow: hidden;
     .glitch-img{
-      &:before, &:after{
-        position: absolute;
-        content: '';
-        width: 182px;
-        height: 68px;
-        top: 50%;
-        margin-top: -20px;
-      }
-      &:before{
-        left: -79px;
-        background: url("../images/svg/line-yt-left.svg") no-repeat;
-      }
-      &:after{
-        right: -38px;
-        background: url("../images/svg/line-yt-right.svg") no-repeat;
-      }
       .glitch__item:nth-child(5){
         background-color:  transparent !important;
       }
@@ -80,12 +68,16 @@
       z-index: 10;
       bottom: 79px;
       left: 20px;
+      display: flex;
+      img{
+        margin-right: 48px;
+      }
     }
     .pilot-img{
       position: absolute;
       z-index: 8;
       bottom: 0;
-      left: 290px;
+      left: 0;
       width: 900px;
       height: 900px;
       img{
@@ -97,7 +89,7 @@
       position: absolute;
       z-index: 6;
       bottom: 0;
-      left: 0;
+      left: 280px;
     }
   }
   &-wrap__link{
@@ -241,24 +233,6 @@
     }
     .glitch-img {
       width: 1110px;
-      &:before, &:after{
-        margin-top: -42px;
-      }
-      &:before{
-
-      }
-      &:after{
-        right: -61px;
-      }
-      .yt-link{
-        margin-top: -48px;
-      }
-      .yt-link-red{
-        right: -62px;
-      }
-      .yt-link-red{
-        right: -62px;
-      }
     }
     .cybr-btn-yellow{
       top: 35%;
@@ -275,6 +249,7 @@
     .hero-image{
       bottom: 12px;
       left: 9px;
+
     }
     .hero-subtitle{
       width: 334px;

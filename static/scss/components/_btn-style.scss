@@ -9,7 +9,7 @@
 }
 
 .cybr-btn {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --primary: #FF002E;
   --shadow-primary: hsl(var(--shadow-primary-hue), 100%, 40%);
   --primary-hue: 0;
   --primary-lightness: 50;
@@ -47,10 +47,10 @@
 }
 
 .cybr-btn:hover {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+  --primary: #FF002E;
 }
 .cybr-btn:active {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+  --primary: #FF002E;
 }
 .cybr-btn-yellow{
 

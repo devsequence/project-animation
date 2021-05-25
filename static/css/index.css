@@ -561,22 +561,13 @@ button {
     .pagination li:last-of-type {
       display: block; } }
 
+body {
+  overflow: hidden; }
+
 .hero-wrapper {
   background-size: cover !important;
-  height: 100vh; }
-  .hero-wrapper .glitch-img:before, .hero-wrapper .glitch-img:after {
-    position: absolute;
-    content: '';
-    width: 182px;
-    height: 68px;
-    top: 50%;
-    margin-top: -20px; }
-  .hero-wrapper .glitch-img:before {
-    left: -79px;
-    background: url("../images/svg/line-yt-left.svg") no-repeat; }
-  .hero-wrapper .glitch-img:after {
-    right: -38px;
-    background: url("../images/svg/line-yt-right.svg") no-repeat; }
+  height: 100vh;
+  overflow: hidden; }
   .hero-wrapper .glitch-img .glitch__item:nth-child(5) {
     background-color: transparent !important; }
   .hero-wrapper .glitch-img .yt-link {
@@ -629,12 +620,15 @@ button {
     position: absolute;
     z-index: 10;
     bottom: 79px;
-    left: 20px; }
+    left: 20px;
+    display: flex; }
+    .hero-wrapper .hero-image img {
+      margin-right: 48px; }
   .hero-wrapper .pilot-img {
     position: absolute;
     z-index: 8;
     bottom: 0;
-    left: 290px;
+    left: 0;
     width: 900px;
     height: 900px; }
     .hero-wrapper .pilot-img img {
@@ -644,7 +638,7 @@ button {
     position: absolute;
     z-index: 6;
     bottom: 0;
-    left: 0; }
+    left: 280px; }
 
 .hero-wrap__link {
   clip-path: polygon(0 1%, 95% 0, 100% 25%, 100% 100%, 5% 100%, 0 75%);
@@ -766,16 +760,6 @@ button {
     height: 747px; }
   .hero-wrapper .glitch-img {
     width: 1110px; }
-    .hero-wrapper .glitch-img:before, .hero-wrapper .glitch-img:after {
-      margin-top: -42px; }
-    .hero-wrapper .glitch-img:after {
-      right: -61px; }
-    .hero-wrapper .glitch-img .yt-link {
-      margin-top: -48px; }
-    .hero-wrapper .glitch-img .yt-link-red {
-      right: -62px; }
-    .hero-wrapper .glitch-img .yt-link-red {
-      right: -62px; }
   .hero-wrapper .cybr-btn-yellow {
     top: 35%; }
   .hero-wrapper .cybr__btn--wrap {
@@ -814,7 +798,7 @@ button {
   filter: drop-shadow(0px 0px 15px rgba(251, 39, 64, 0.5)); }
 
 .cybr-btn {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --primary: #FF002E;
   --shadow-primary: hsl(var(--shadow-primary-hue), 100%, 40%);
   --primary-hue: 0;
   --primary-lightness: 50;
@@ -850,10 +834,10 @@ button {
   transition: background 0.2s; }
 
 .cybr-btn:hover {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%)); }
+  --primary: #FF002E; }
 
 .cybr-btn:active {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%)); }
+  --primary: #FF002E; }
 
 .cybr-btn-yellow {
   position: fixed;
@@ -1021,11 +1005,10 @@ body {
 
 .glitch-img {
   width: 1253px;
-  height: 186px;
+  height: 253px;
   top: 21px;
   margin: 0 auto;
   left: 0;
-  right: 0;
   position: absolute;
   z-index: 3; }
 
