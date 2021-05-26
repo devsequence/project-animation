@@ -736,6 +736,7 @@ body {
   cursor: default; }
 
 .hero-social {
+  z-index: 31;
   position: absolute;
   right: 330px;
   bottom: 50px; }
@@ -839,26 +840,34 @@ body {
     display: none; } }
 
 @media screen and (max-width: 992px) {
+  body {
+    overflow: auto; }
   .hero-wrapper {
-    min-height: 896px; }
+    height: 896px;
+    position: relative; }
     .hero-wrapper .cybr-btn-yellow {
-      top: 35%;
+      top: 200px;
+      position: absolute;
       transform: rotate(270deg);
       margin-right: -122px;
       right: 100%; }
     .hero-wrapper .glitch-img {
       left: 0;
       right: 0;
-      height: 140px; }
+      height: 140px;
+      width: 100%;
+      overflow: hidden; }
       .hero-wrapper .glitch-img:after {
-        position: fixed;
+        position: absolute;
         content: '';
-        left: 0;
-        top: 100px;
-        width: 100vw;
+        left: -50%;
+        top: 86px;
+        width: 200%;
         height: 2px;
         z-index: -2;
         background: #FFE600; }
+      .hero-wrapper .glitch-img .glitch__item {
+        background-position: center; }
     .hero-wrapper .car-img {
       bottom: 0;
       top: 20%;
@@ -876,12 +885,18 @@ body {
       margin: 0 0 0 auto; }
       .hero-wrapper .pilot-img img {
         transform: scale(-1, 1); }
+    .hero-wrapper .slider {
+      width: 100%; }
+    .hero-wrapper .swiper-button-next, .hero-wrapper .swiper-button-prev {
+      z-index: 50; }
     .hero-wrapper .swiper-container {
       z-index: 11;
       width: 100%;
-      max-width: 90%; }
+      max-width: 90%;
+      right: 0;
+      position: absolute; }
     .hero-wrapper .hero-image {
-      bottom: 275px;
+      bottom: 215px;
       transform: rotate(-90deg);
       left: -130px; }
       .hero-wrapper .hero-image img {
@@ -903,14 +918,87 @@ body {
   .hero-social:before {
     width: 121px; } }
 
+@media screen and (max-width: 768px) {
+  .hero-wrapper .glitch-img {
+    height: 110px;
+    top: 38px; }
+    .hero-wrapper .glitch-img:before {
+      right: 223px;
+      top: 18px; }
+    .hero-wrapper .glitch-img:after {
+      top: 42px; }
+    .hero-wrapper .glitch-img .glitch__item {
+      height: 70px; }
+  .hero-wrapper .pilot-img {
+    top: 87px;
+    right: -190px;
+    max-width: 470px;
+    max-height: 490px; }
+  .hero-wrapper .car-img {
+    top: 234px;
+    left: -60px; }
+    .hero-wrapper .car-img img {
+      max-width: 840px; }
+  .hero-wrapper .hero-subtitle {
+    bottom: 372px;
+    left: auto;
+    right: 5px;
+    border-width: 2px;
+    width: 249px;
+    height: 36px;
+    font-size: 12px;
+    line-height: 12px; }
+  .hero-wrapper .slider {
+    min-width: 410px;
+    max-width: 410px;
+    width: 90%;
+    bottom: 150px; }
+    .hero-wrapper .slider .swiper-slide {
+      width: 330px;
+      height: 210px;
+      background-size: contain; }
+    .hero-wrapper .slider .swiper-slide.swiper-slide-next {
+      right: 125px;
+      top: 0; }
+    .hero-wrapper .slider .swiper-slide-active ~ .swiper-slide {
+      transform: translate3d(100%, 0, 0) scale(0.8); }
+    .hero-wrapper .slider img {
+      width: 70%;
+      height: 100%;
+      object-fit: contain; }
+  .hero-wrapper .swiper-container-horizontal > .swiper-pagination-bullets, .hero-wrapper .swiper-pagination-custom, .hero-wrapper .swiper-pagination-fraction {
+    bottom: 6px;
+    letter-spacing: -2px;
+    left: calc(100% - 293px); }
+  .hero-wrapper .swiper-button-prev, .hero-wrapper .swiper-button-next {
+    top: 195px; }
+  .hero-wrapper .swiper-button-prev {
+    left: calc(100% - 248px); }
+  .hero-wrapper .swiper-button-next {
+    left: calc(100% - 330px); }
+  .hero-wrapper .hero-social {
+    bottom: 58px;
+    left: 30px; }
+  .hero-wrapper .cybr__btn--wrap {
+    right: 22px;
+    bottom: 55px; }
+  .hero-wrapper .hero-image {
+    bottom: 280px;
+    left: -135px; }
+    .hero-wrapper .hero-image img:nth-child(1) {
+      max-width: 150px; }
+    .hero-wrapper .hero-image img:nth-child(2) {
+      max-width: 125px; } }
+
 .slider {
   position: absolute;
   z-index: 30;
-  bottom: 150px;
+  bottom: 22%;
   right: 0;
   width: 40%;
+  min-width: 705px;
   height: 360px;
-  margin: 50px 0;
+  margin: 0px 0;
   user-select: none;
   touch-action: pan-y; }
 
@@ -963,7 +1051,7 @@ body {
   position: absolute;
   right: 60px;
   bottom: 60px;
-  z-index: 12; }
+  z-index: 41; }
 
 .cybr-btn-shadow {
   filter: drop-shadow(0px 0px 15px rgba(251, 39, 64, 0.5)); }

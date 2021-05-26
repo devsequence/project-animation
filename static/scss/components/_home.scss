@@ -202,6 +202,7 @@ body{
   cursor: default;
 }
 .hero-social{
+  z-index: 31;
   position: absolute;
   right: 330px;
   bottom: 50px;
@@ -349,10 +350,15 @@ body{
   }
 }
 @media screen and( max-width: 992px) {
+  body{
+    overflow: auto;
+  }
   .hero-wrapper {
-    min-height: 896px;
+    height: 896px;
+    position: relative;
     .cybr-btn-yellow {
-      top: 35%;
+      top: 200px;
+      position: absolute;
       transform: rotate(270deg);
       margin-right: -122px;
       right: 100%;
@@ -361,15 +367,20 @@ body{
       left: 0;
       right: 0;
       height: 140px;
+      width: 100%;
+      overflow: hidden;
       &:after{
-        position: fixed;
+        position: absolute;
         content: '';
-        left: 0;
-        top: 100px;
-        width: 100vw;
+        left: -50%;
+        top: 86px;
+        width: 200%;
         height: 2px;
         z-index: -2;
         background: #FFE600;
+      }
+      .glitch__item{
+        background-position: center;
       }
     }
     .car-img{
@@ -394,14 +405,22 @@ body{
         transform: scale(-1, 1);
       }
     }
+    .slider{
+      width: 100%;
+    }
+    .swiper-button-next, .swiper-button-prev{
+      z-index: 50;
+    }
     .swiper-container{
       z-index: 11;
       width: 100%;
       max-width: 90%;
+      right: 0;
+      position: absolute;
     }
 
     .hero-image {
-      bottom: 275px;
+      bottom: 215px;
       transform: rotate(-90deg);
       left: -130px;
       img{
@@ -434,15 +453,113 @@ body{
     }
   }
 }
-
+@media screen and( max-width: 768px){
+  .hero-wrapper {
+    .glitch-img{
+      height: 110px;
+      top: 38px;
+      &:before{
+        right: 223px;
+        top: 18px;
+      }
+      &:after{
+        top: 42px;
+      }
+      .glitch__item{
+        height: 70px;
+      }
+    }
+    .pilot-img{
+      top: 87px;
+      right: -190px;
+      max-width: 470px;
+      max-height: 490px;
+    }
+    .car-img {
+      top: 234px;
+      left: -60px;
+      img{
+        max-width: 840px;
+      }
+    }
+    .hero-subtitle {
+      bottom: 372px;
+      left: auto;
+      right: 5px;
+      border-width: 2px;
+      width: 249px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .slider {
+      min-width: 410px;
+      max-width: 410px;
+      width: 90%;
+      bottom: 150px;
+      .swiper-slide{
+        width: 330px;
+        height: 210px;
+        background-size: contain;
+      }
+      .swiper-slide.swiper-slide-next{
+        right: 125px;
+        top: 0;
+      }
+      .swiper-slide-active ~ .swiper-slide {
+        transform: translate3d(100%, 0, 0) scale(0.8);
+      }
+      img {
+        width: 70%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 6px;
+      letter-spacing: -2px;
+      left: calc(100% - 293px);
+    }
+    .swiper-button-prev,.swiper-button-next {
+      top: 195px;
+    }
+    .swiper-button-prev {
+      left: calc(100% - 248px);
+    }
+    .swiper-button-next {
+      left: calc(100% - 330px);
+    }
+    .hero-social {
+      bottom: 58px;
+      left: 30px;
+    }
+    .cybr__btn--wrap {
+      right: 22px;
+      bottom: 55px;
+    }
+    .hero-image {
+      bottom: 280px;
+      left: -135px;
+      img{
+        &:nth-child(1){
+          max-width: 150px;
+        }
+        &:nth-child(2){
+          max-width: 125px;
+        }
+      }
+    }
+  }
+}
 .slider {
   position: absolute;
   z-index: 30;
-  bottom: 150px;
+  bottom: 22%;
   right: 0;
   width: 40%;
+  min-width: 705px;
   height: 360px;
-  margin: 50px 0;
+  margin: 0px 0;
   user-select: none;
   touch-action: pan-y;
 }
