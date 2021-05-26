@@ -601,7 +601,7 @@ body {
     z-index: 10;
     width: 326px;
     height: 40px;
-    bottom: 179px;
+    bottom: 80px;
     left: 40px;
     background: #000000;
     border: 5px solid #0066FF;
@@ -619,7 +619,7 @@ body {
   .hero-wrapper .hero-image {
     position: absolute;
     z-index: 10;
-    bottom: 79px;
+    bottom: 40px;
     left: 20px;
     display: flex; }
     .hero-wrapper .hero-image img {
@@ -629,8 +629,8 @@ body {
     z-index: 8;
     bottom: 0;
     left: 0;
-    width: 900px;
-    height: 900px; }
+    width: 600px;
+    height: 640px; }
     .hero-wrapper .pilot-img img {
       width: 100%;
       height: 100%; }
@@ -689,24 +689,10 @@ body {
   .hero-information .information-red {
     color: #FB2740; }
 
-.mySwiper {
-  width: auto;
-  max-width: 40%;
-  z-index: 11; }
-  .mySwiper svg {
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 61px;
-    z-index: -10;
-    left: 5px;
-    max-width: 376px;
-    max-height: 216px; }
-
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 305px;
-  left: calc(100% - 140px);
+  position: absolute;
+  bottom: 309px;
+  left: calc(100% - 132px);
   width: 50px;
   color: #ffffff; }
 
@@ -721,8 +707,10 @@ body {
 
 .swiper-button-next, .swiper-button-prev {
   width: 22px;
-  height: 10px;
-  top: 24px; }
+  cursor: pointer;
+  height: 25px;
+  top: 24px;
+  position: absolute; }
   .swiper-button-next:before, .swiper-button-prev:before {
     position: absolute;
     content: '';
@@ -742,6 +730,10 @@ body {
   left: calc(100% - 90px); }
   .swiper-button-prev:before {
     background: url("../images/svg/ico-arrow-right.svg") no-repeat; }
+
+.swiper-button-disabled {
+  opacity: 0.2;
+  cursor: default; }
 
 .hero-social {
   position: absolute;
@@ -865,7 +857,7 @@ body {
     .hero-wrapper .swiper-container {
       z-index: 11;
       width: 100%;
-      max-width: 100%; }
+      max-width: 90%; }
     .hero-wrapper .hero-image {
       bottom: 275px;
       transform: rotate(-90deg);
@@ -888,6 +880,61 @@ body {
       right: 20px; }
   .hero-social:before {
     width: 121px; } }
+
+.slider {
+  position: absolute;
+  z-index: 30;
+  bottom: 150px;
+  right: 0;
+  width: 40%;
+  height: 360px;
+  margin: 50px 0;
+  user-select: none;
+  touch-action: pan-y; }
+
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+  max-height: 360px;
+  max-width: 100%; }
+
+.slider img {
+  margin: 0;
+  vertical-align: top; }
+
+.slider .swiper-wrapper {
+  min-width: 100%;
+  transform: translate3d(0px, 0px, 0px) !important;
+  transition: all 0.5s ease 0s; }
+
+.slider .swiper-slide {
+  width: 520px;
+  transform: translate3d(0, 0, 0) scale(0.7);
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  transition: all 1s;
+  top: 0;
+  height: 334px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/general/video-frame.png") no-repeat center center; }
+
+.slider .swiper-slide.swiper-slide-active {
+  transform: translate3d(0, 0, 0) scale(1);
+  opacity: 1;
+  z-index: 2;
+  position: relative; }
+
+.slider .swiper-slide.swiper-slide-next {
+  opacity: 1;
+  z-index: 2;
+  right: 350px; }
+
+.slider .swiper-slide-active ~ .swiper-slide {
+  transform: translate3d(100%, 0, 0) scale(0.7); }
 
 .cybr__btn--wrap {
   position: absolute;
@@ -1114,6 +1161,14 @@ body {
   left: 0;
   position: absolute;
   z-index: 3; }
+  .glitch-img:before {
+    position: absolute;
+    content: '';
+    right: 280px;
+    top: 85%;
+    background: url("../images/general/bg-logo.svg") no-repeat center;
+    width: 141px;
+    height: 85px; }
 
 .glitch-img img, .glitch__item:nth-child(n+2) {
   opacity: 0;
@@ -1312,21 +1367,6 @@ body {
     transform: translate3d(0, 0, 0);
     -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0); } }
-
-.swiper-container {
-  position: absolute;
-  bottom: 210px;
-  right: 0;
-  width: 55%; }
-
-.swiper-slide {
-  height: 334px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url("../images/general/video-frame.png") no-repeat center center; }
 
 .swiper-slide-prev {
   opacity: 0 !important; }

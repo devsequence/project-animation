@@ -37,7 +37,6 @@ body{
   align-items: flex-start;
   overflow: hidden;
 }
-
   .glitch__item{
     background-size: contain;
     background-repeat: no-repeat;
@@ -55,6 +54,15 @@ body{
     left: 0;
     position: absolute;
     z-index: 3;
+    &:before{
+      position: absolute;
+      content: '';
+      right: 280px;
+      top: 85%;
+      background: url("../images/general/bg-logo.svg") no-repeat center;
+      width: 141px;
+      height: 85px;
+    }
   }
 
   .glitch-img img, .glitch__item:nth-child(n+2) {
