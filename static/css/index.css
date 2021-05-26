@@ -767,15 +767,27 @@ body {
 @media screen and (max-width: 1440px) {
   .hero-wrapper .pilot-img {
     max-width: 600px;
-    max-height: 600px; }
-  .hero-wrapper .car-img img {
-    max-width: 700px; }
+    max-height: 640px;
+    left: 30px; }
+  .hero-wrapper .car-img {
+    bottom: -25px;
+    left: -200px; }
+    .hero-wrapper .car-img img {
+      max-width: 1000px; }
   .hero-wrapper .glitch-img {
-    width: 70%;
+    width: 923px;
     height: 200px;
-    left: 60px; }
+    left: 70px;
+    top: 30px; }
+    .hero-wrapper .glitch-img:before {
+      right: 164px;
+      top: 78%; }
   .hero-wrapper .cybr-btn-yellow {
-    top: 90px; }
+    top: 59px;
+    width: 207px;
+    background-size: contain;
+    right: 30px;
+    height: 54px; }
   .hero-wrapper .cybr__btn--wrap {
     right: 36px;
     bottom: 52px; }
@@ -784,23 +796,33 @@ body {
     right: 304px;
     bottom: 38px; }
   .hero-wrapper .hero-image {
-    bottom: 12px;
-    left: 9px; }
+    bottom: 36px;
+    left: 26px; }
+    .hero-wrapper .hero-image img {
+      margin-right: 16px; }
   .hero-wrapper .hero-subtitle {
     width: 334px;
     height: 43px;
-    bottom: 74px;
+    bottom: 70px;
     left: 36px; }
-  .hero-wrapper .swiper-container {
-    position: absolute;
-    bottom: 67px;
-    right: 0; }
-    .hero-wrapper .swiper-container .swiper-slide {
-      width: 410px !important; }
   .hero-wrapper .hero-information {
     width: 527px;
     right: 103px;
-    top: 260px; } }
+    top: 260px; }
+  .hero-wrapper .slider {
+    bottom: 167px;
+    right: 0;
+    width: 49%;
+    height: 230px;
+    margin: 50px 0 0; }
+  .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 177px;
+    letter-spacing: -2px;
+    left: calc(100% - 113px); }
+  .swiper-button-prev {
+    left: calc(100% - 67px); }
+  .swiper-button-next {
+    left: calc(100% - 150px); } }
 
 @media screen and (max-width: 1350px) {
   .hero-wrapper .hero-image img:nth-child(1) {
@@ -909,7 +931,7 @@ body {
 
 .slider .swiper-slide {
   width: 520px;
-  transform: translate3d(0, 0, 0) scale(0.7);
+  transform: translate3d(0, 0, 0) scale(0.6);
   z-index: 1;
   position: absolute;
   opacity: 0;
@@ -931,10 +953,11 @@ body {
 .slider .swiper-slide.swiper-slide-next {
   opacity: 1;
   z-index: 2;
-  right: 350px; }
+  right: 350px;
+  top: -10px; }
 
 .slider .swiper-slide-active ~ .swiper-slide {
-  transform: translate3d(100%, 0, 0) scale(0.7); }
+  transform: translate3d(100%, 0, 0) scale(0.6); }
 
 .cybr__btn--wrap {
   position: absolute;

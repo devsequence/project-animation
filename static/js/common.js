@@ -21,8 +21,8 @@ $(document).ready(function() {
         var pageY = e.pageY - ($(window).height() / 2);
         var newvalueX = width * pageX * +0.5 ;
         var newvalueY = height * pageY * +0.5;
-        var carnewvalueX = width * pageX * +0.2+10;
-        var carnewvalueY = height * pageY * +0.2+10;
+        var carnewvalueX = width * pageX * +0.2 - 10;
+        var carnewvalueY = height * pageY * +0.2 - 10;
         if ($(window).width() >= 992) {
             $('.pilot-img').css("bottom", "-"+newvalueX+"%");
             $('.pilot-img').css("left", "-"+newvalueY+"%");

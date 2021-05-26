@@ -240,20 +240,33 @@ body{
   .hero-wrapper{
     .pilot-img{
       max-width: 600px;
-      max-height: 600px;
+      max-height: 640px;
+      left: 30px;
     }
     .car-img{
+      bottom: -25px;
+      left: -200px;
       img{
-        max-width: 700px;
+        max-width: 1000px;
+
       }
     }
     .glitch-img {
-      width: 70%;
+      width: 923px;
       height: 200px;
-      left: 60px;
+      left: 70px;
+      top: 30px;
+      &:before{
+        right: 164px;
+        top: 78%;
+      }
     }
     .cybr-btn-yellow{
-      top: 90px;
+      top: 59px;
+      width: 207px;
+      background-size: contain;
+      right: 30px;
+      height: 54px;
     }
     .cybr__btn--wrap{
       right: 36px;
@@ -265,30 +278,45 @@ body{
       bottom: 38px;
     }
     .hero-image{
-      bottom: 12px;
-      left: 9px;
-
+      bottom: 36px;
+      left: 26px;
+      img{
+        margin-right: 16px;
+      }
     }
     .hero-subtitle{
       width: 334px;
       height: 43px;
-      bottom: 74px;
+      bottom: 70px;
       left: 36px;
     }
-    .swiper-container {
-      position: absolute;
-      bottom: 67px;
-      right: 0;
-      .swiper-slide{
-        width: 410px !important;
-      }
-    }
+
     .hero-information{
       width: 527px;
       right: 103px;
       top: 260px;
 
     }
+  }
+  .hero-wrapper{
+    .slider{
+      bottom: 167px;
+      right: 0;
+      width: 49%;
+      height: 230px;
+      margin: 50px 0 0;
+    }
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 177px;
+    letter-spacing: -2px;
+    left: calc(100% - 113px);
+  }
+  .swiper-button-prev {
+    left: calc(100% - 67px);
+  }
+  .swiper-button-next {
+    left: calc(100% - 150px);
   }
 }
 @media screen and( max-width: 1350px) {
@@ -435,7 +463,7 @@ body{
 }
 .slider .swiper-slide {
   width: 520px;
-  transform: translate3d(0, 0, 0) scale(.7);
+  transform: translate3d(0, 0, 0) scale(.6);
   z-index: 1;
   position: absolute;
   opacity: 0;
@@ -458,8 +486,10 @@ body{
   opacity: 1;
   z-index: 2;
   right: 350px;
+  top: -10px;
+
 }
 .slider .swiper-slide-active ~ .swiper-slide {
-  transform: translate3d(100%, 0, 0) scale(.7);
+  transform: translate3d(100%, 0, 0) scale(.6);
 }
 
