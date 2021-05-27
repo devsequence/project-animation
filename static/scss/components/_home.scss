@@ -261,6 +261,14 @@ body{
         top: 78%;
       }
     }
+    .glitch__item{
+      &:first-of-type{
+        &:before{
+          left: 618px;
+          top: 156px;
+        }
+      }
+    }
     .cybr-btn-yellow{
       top: 59px;
       width: 207px;
@@ -287,10 +295,9 @@ body{
     .hero-subtitle{
       width: 334px;
       height: 43px;
-      bottom: 100px;
+      bottom: 127px;
       left: 36px;
     }
-
     .hero-information{
       width: 527px;
       right: 103px;
@@ -350,6 +357,14 @@ body{
       width: 820px;
       height: 170px;
     }
+    .glitch__item{
+      &:first-of-type{
+        &:before{
+          left: 548px;
+          top: 126px;
+        }
+      }
+    }
   }
 }
 @media screen and( max-width: 1200px) {
@@ -377,11 +392,17 @@ body{
         top: 70%;
       }
     }
+    .glitch__item{
+      &:first-of-type{
+        &:before{
+          left: 400px;
+          top: 85px;
+        }
+      }
+    }
     .slider{
       min-width: 605px;
       .swiper-slide.swiper-slide-next {
-        opacity: 1;
-        z-index: 2;
         right: 250px;
       }
     }
@@ -400,6 +421,7 @@ body{
     position: relative;
     .cybr-btn-yellow {
       top: 200px;
+      height: 45px;
       position: absolute;
       transform: rotate(270deg);
       margin-right: -122px;
@@ -421,17 +443,18 @@ body{
         z-index: -2;
         background: #FFE600;
       }
-      &:before {
-        right: auto;
-        top: 100px;
-        left: 160px;
-      }
       .glitch__item{
         background-position: center;
         max-width: 700px;
         height: 140px;
         margin: 0 auto;
         right: 0;
+        &:first-of-type{
+          &:before{
+            left: 40px;
+            top: 85px;
+          }
+        }
       }
     }
     .car-img{
@@ -528,6 +551,7 @@ body{
     }
   }
 }
+
 @media screen and( max-width: 768px){
   .hero-wrapper {
     .glitch-img{
@@ -542,6 +566,15 @@ body{
       }
       .glitch__item{
         height: 70px;
+        &:first-of-type{
+          &:before{
+            top: 20px;
+            left: 194px;
+            width: 139px;
+            height: 85px;
+            background-size: cover;
+          }
+        }
       }
     }
     .pilot-img{
@@ -588,5 +621,30 @@ body{
         }
       }
     }
+  }
+}
+@media screen and( max-width: 500px){
+
+  .hero-wrapper{
+    .glitch-img{
+      .glitch__item{
+        &:first-of-type{
+          &:before{
+            left: 50px;
+          }
+        }
+      }
+    }
+
+    .slider{
+      min-width: 369px;
+      max-width: 369px;
+      .swiper-slide.swiper-slide-next {
+        right: 123px;
+        top: 0;
+        transform: translate3d(100%, 0, 0) scale(0.8) !important;
+      }
+    }
+
   }
 }
