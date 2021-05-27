@@ -92,7 +92,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../images/general/video-frame.png") no-repeat  center center;
+  &:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/general/video-frame.png") no-repeat  center center;
+    background-size: contain;
+  }
+  img{
+    clip-path: url(#myClip);
+  }
+
 }
 .slider .swiper-slide.swiper-slide-active {
   transform: translate3d(0, 0, 0) scale(1);
