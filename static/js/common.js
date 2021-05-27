@@ -30,7 +30,7 @@ $(document).ready(function() {
             $('.pilot-img').css("left", "-"+newvalueY+"%");
             $('.car-img').css("bottom", "-"+carnewvalueX+"%");
             $('.car-img').css("left",  carnewvalueY+"% ");
-            $('.hero-wrapper-bg img').css("bottom", "-"+bgnewvalueX+"%");
+            $('.hero-wrapper-bg img').css("top", "-"+bgnewvalueX+"%");
             $('.hero-wrapper-bg img').css("left", "-"+bgnewvalueY+"%");
 
 

@@ -568,10 +568,10 @@ body {
   height: 100vh;
   overflow: hidden; }
   .hero-wrapper .hero-wrapper-bg {
-    top: 0;
+    top: 50%;
     left: 50%;
-    width: 110%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     position: absolute; }
     .hero-wrapper .hero-wrapper-bg img {
       top: 0;
