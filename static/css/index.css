@@ -565,9 +565,20 @@ body {
   overflow: hidden; }
 
 .hero-wrapper {
-  background-size: cover !important;
   height: 100vh;
   overflow: hidden; }
+  .hero-wrapper .hero-wrapper-bg {
+    top: 0;
+    left: 50%;
+    width: 110%;
+    height: 100%;
+    position: absolute; }
+    .hero-wrapper .hero-wrapper-bg img {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
   .hero-wrapper .glitch-img .glitch__item:nth-child(5) {
     background-color: transparent !important; }
   .hero-wrapper .glitch-img .yt-link {
@@ -615,7 +626,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    filter: drop-shadow(0px 0px 24px #054CED); }
   .hero-wrapper .hero-image {
     position: absolute;
     z-index: 10;
@@ -1042,10 +1054,11 @@ body {
   opacity: 1;
   z-index: 2;
   right: 350px;
-  top: -10px; }
+  top: -10px;
+  transform: translate3d(100%, 0, 0) scale(0.6) !important; }
 
 .slider .swiper-slide-active ~ .swiper-slide {
-  transform: translate3d(100%, 0, 0) scale(0.6); }
+  transform: translate3d(150%, 0, 0) scale(0.6); }
 
 .cybr__btn--wrap {
   position: absolute;

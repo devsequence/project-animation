@@ -23,11 +23,17 @@ $(document).ready(function() {
         var newvalueY = height * pageY * +0.5;
         var carnewvalueX = width * pageX * +0.2 - 10;
         var carnewvalueY = height * pageY * +0.2 - 10;
+        var bgnewvalueX = width * pageX * +0.2 + 50;
+        var bgnewvalueY = height * pageY * +0.2 + 50;
         if ($(window).width() >= 992) {
             $('.pilot-img').css("bottom", "-"+newvalueX+"%");
             $('.pilot-img').css("left", "-"+newvalueY+"%");
             $('.car-img').css("bottom", "-"+carnewvalueX+"%");
-            $('.car-img').css("left", carnewvalueY+"%");
+            $('.car-img').css("left",  carnewvalueY+"% ");
+            $('.hero-wrapper-bg img').css("bottom", "-"+bgnewvalueX+"%");
+            $('.hero-wrapper-bg img').css("left", "-"+bgnewvalueY+"%");
+
+
         }else {}
 
     });
