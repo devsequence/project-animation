@@ -60,7 +60,7 @@ function popupOpen() {
         $('.popup').removeClass('active');
         $('div[data-popup = '+popupButtonData+']').addClass('active');
         $('.popup-overlay').addClass('active');
-        $('.popup-wrap iframe').attr('src', videoLink);
+        $('.popup-wrap iframe').attr('src', 'http://www.youtube.com/embed/'+videoLink);
 
     });
 }
