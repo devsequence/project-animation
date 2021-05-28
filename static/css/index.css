@@ -729,13 +729,22 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative; }
+    .hero-social a:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/svg/icon-fb.svg") no-repeat;
+      filter: blur(7.64817px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      z-index: -1; }
     .hero-social a svg {
-      filter: blur(0.34805px);
-      fill: #d0ac6a !important; }
+      fill: #fff !important; }
     .hero-social a path {
-      fill: #d0ac6a !important; }
-    .hero-social a:hover .social-icon-bg {
-      display: none; }
+      fill: #fff !important; }
+    .hero-social a:hover:before {
+      opacity: 0; }
     .hero-social a:hover svg, .hero-social a:hover path {
       fill: #FFE500 !important; }
   .hero-social img {
@@ -968,6 +977,8 @@ body {
     width: 121px; } }
 
 @media screen and (max-width: 768px) {
+  .popup-wrap {
+    max-height: 300px; }
   .hero-wrapper .glitch-img {
     height: 110px;
     top: 38px; }
@@ -1582,3 +1593,73 @@ body {
 
 .swiper-slide-next {
   transform: scale(0.7); }
+
+.popup-btn {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  cursor: pointer; }
+
+.swiper-slide__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent; }
+  .swiper-slide__text a {
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.1em;
+    color: rgba(255, 0, 46, 0.5); }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all ease 300ms; }
+  .popup.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 150; }
+
+.popup-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  max-width: 910px;
+  max-height: 500px; }
+  .popup-wrap iframe {
+    width: 100%;
+    height: 100%; }
+  .popup-wrap .popup-close {
+    position: absolute;
+    right: 0;
+    top: -20px; }
+    .popup-wrap .popup-close svg, .popup-wrap .popup-close path {
+      fill: #FFE500 !important; }
+
+.popup-overlay {
+  transition: all ease 300ms;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.9); }

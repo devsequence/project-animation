@@ -195,22 +195,30 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../images/svg/icon-fb.svg") no-repeat;
+      filter: blur(7.64817px)  drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      z-index: -1;
+    }
     svg{
-      filter: blur(0.34805px);
-      fill: #d0ac6a !important;
+      fill: #fff !important;
     }
     path{
-      fill: #d0ac6a !important;
+      fill: #fff !important;
     }
     &:hover{
-      .social-icon-bg{
-        display: none;
-
+      &:before{
+        opacity: 0;
       }
       svg, path{
         fill: #FFE500 !important;
       }
-
     }
   }
   img{
@@ -553,6 +561,9 @@ body{
 }
 
 @media screen and( max-width: 768px){
+  .popup-wrap{
+    max-height: 300px;
+  }
   .hero-wrapper {
     .glitch-img{
       height: 110px;

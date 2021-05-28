@@ -49,3 +49,25 @@ var swiper = new Swiper(".swiper-container", {
         prevEl: '.swiper-button-prev',
     }
 });
+
+
+function popupOpen() {
+    const $popupButton = $('.popup-btn');
+    $popupButton.on('click', function (e) {
+        const $this = $(this);
+        const popupButtonData = $this.data('popup');
+        const videoLink = $this.next().text();
+        $('.popup').removeClass('active');
+        $('div[data-popup = '+popupButtonData+']').addClass('active');
+        $('.popup-overlay').addClass('active');
+        $('.popup-wrap iframe').attr('src', videoLink);
+        console.log(videoLink);
+    });
+}
+popupOpen();
+$('.popup-overlay').on('click', function () {
+    $('.popup').removeClass('active');
+});
+$('.popup-close').on('click', function () {
+    $('.popup-overlay, .popup').removeClass('active');
+});
