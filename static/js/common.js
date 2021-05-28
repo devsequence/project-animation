@@ -61,13 +61,15 @@ function popupOpen() {
         $('div[data-popup = '+popupButtonData+']').addClass('active');
         $('.popup-overlay').addClass('active');
         $('.popup-wrap iframe').attr('src', videoLink);
-        console.log(videoLink);
+
     });
 }
 popupOpen();
 $('.popup-overlay').on('click', function () {
     $('.popup').removeClass('active');
+    $('.popup-wrap iframe').attr('src', '');
 });
 $('.popup-close').on('click', function () {
-    $('.popup-overlay, .popup').removeClass('active');
+    $('.popup, .popup-overlay').removeClass('active');
+    $('.popup-wrap iframe').attr('src', '');
 });
