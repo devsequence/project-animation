@@ -1605,6 +1605,7 @@ body {
 
 .swiper-slide__text {
   position: absolute;
+  z-index: 2;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -1649,6 +1650,7 @@ body {
     height: 100%; }
   .popup-wrap .popup-close {
     position: absolute;
+    cursor: pointer;
     right: 0;
     top: -20px; }
     .popup-wrap .popup-close svg, .popup-wrap .popup-close path {
